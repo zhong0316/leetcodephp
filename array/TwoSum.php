@@ -27,8 +27,8 @@ class TwoSum {
     }
 
 }
-
-
+echo 0x7fffffff . "\n";
+echo -0x80000000;
 $nums = array(1,2,3,4,5);
 $clz = new TwoSum();
 $res = $clz->twoSum($nums, 6);
