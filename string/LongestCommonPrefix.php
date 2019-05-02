@@ -14,12 +14,12 @@ class LongestCommonPrefix
         $counter = 0;
         if (count($strs) == 0) return "";
         $min = PHP_INT_MAX;
-        foreach ($strs as $key => $value) {
+        foreach ($strs as $index => $value) {
             $min = min($min, strlen($value));
         }
         while ($counter < $min) {
             $c1 = $strs[0][$counter];
-            foreach ($strs as $key => $value) {
+            foreach ($strs as $index => $value) {
                 if ($value[$counter] != $c1) return substr($strs[0], 0, $counter);
             }
             $counter++;
@@ -28,6 +28,6 @@ class LongestCommonPrefix
     }
 }
 
-$strs = array("flower","flow","alight");
+$strs = array("flower","flow","flight");
 $solution = new LongestCommonPrefix();
-echo $solution->longestCommonPrefix($strs);
+print $solution->longestCommonPrefix($strs);

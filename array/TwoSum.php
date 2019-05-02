@@ -15,11 +15,11 @@ class TwoSum {
             $map[$nums[$i]] = $i;
         }
 
-        foreach ($nums as $key => $value) {
+        foreach ($nums as $index => $value) {
             $shift = $target - $value;
             if (isset($map[$shift])) {
-                if ($key == $map[$shift]) continue;
-                return array($key, $map[$shift]);
+                if ($index == $map[$shift]) continue;
+                return array($index, $map[$shift]);
             }
         }
 
